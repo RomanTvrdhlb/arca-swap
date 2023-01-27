@@ -27,4 +27,8 @@ p{
   font-size: 96px;
   line-height: 116px;
   color: var(--color-c);
+
+  @media (max-width: (355px)) {
+    font-size: 78px;
+  }
 }
