@@ -1,6 +1,7 @@
 // import './components/accordions';
 // import './components/anchor';
-import './components/lift';
+// import './components/lift';
+import './components/swapCoin';
 // import './components/password';
 // import './components/galery';
 // import './components/modals';
