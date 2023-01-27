@@ -14,19 +14,26 @@
   }
 
   &__box{
-   display: grid;
-   grid-template-columns: 525px auto;
-   grid-gap: clamp( 40px, 10.177vw, 98px);
+  display: grid;
+  grid-template-columns: 1fr 343px;
+  grid-gap: clamp( 40px, 10.177vw, 98px);
 
-  //  @include tablet{
-  //   grid-template-columns: 100%;
-  //  }
+   @include tablet{
+    grid-template-columns: 100%;
+   }
   }
 
   &__inner{
     display: flex;
+    align-items: flex-start;
     flex-direction: column;
     grid-gap: clamp(16px, 2.596vw, 25px);
+    width: 100%;
+    max-width: 522px;
+
+    @include mobile{
+      align-items: center;
+    }
   }
 
   &__wrapper{
@@ -37,6 +44,7 @@
     box-shadow: 0px 4px 30px rgba(196, 196, 196, 0.2);
     border-radius: 20px;
     padding: 44px clamp(29px, 4.154vw, 40px);
+    width: 100%;
   }
 }
 

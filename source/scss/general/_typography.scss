@@ -14,6 +14,10 @@ p{
   font-size: clamp(14px, 1.869vw, 18px);
   line-height: 150%;
   color: var(--color-c);
+
+  @include mobile{
+    text-align: center;
+  }
 }
 
 .main-subtitle{

@@ -181,8 +181,9 @@ input[type="number"] {
 
 .container {
   position: relative;
-
-  width: var(--container-width);
+  width: 100%;
+  max-width: var(--container-width);
+  padding: 0 var(--container-offset);
   margin: 0 auto;
 
   &--mode {
