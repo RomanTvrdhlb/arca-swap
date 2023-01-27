@@ -1,0 +1,245 @@
+.main-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 calc((1422px - 1280px) / 2) clamp(20px, 1.969vw, 28px) calc((1422px - 1280px) / 2);
+
+@include tablet {
+    padding: 0 10px clamp(20px, 1.969vw, 28px);
+  }
+
+  p {
+    max-width: 526px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: var(--font-family);
+    color: var(--color-a);
+
+    opacity: 0.8;
+  }
+
+  &__title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: clamp(22px, 2.954vw, 42px);
+    line-height: 115%;
+    font-family: var(--font-family1);
+    color: var(--color-a);
+  }
+
+  &__btn {
+    @include mobile {
+      display: none;
+    }
+  }
+
+  &__pages {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    grid-gap: 11px 52px;
+  }
+
+  &__more {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: var(--font-family);
+    text-align: right;
+    color: var(--color-j);
+    text-transform: uppercase;
+
+    grid-gap: clamp(5px, 0.844vw, 12px);
+  }
+
+  &__link {
+    position: relative;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 18px;
+    font-family: var(--font-family);
+    color: var(--color-a);
+
+    transition: all 0.4s;
+    &:hover {
+      color: var(--color-f);
+    }
+
+
+    &--arrow {
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: -50%;
+
+        width: 6px;
+        height: 11px;
+
+        background-image: url("data:image/svg+xml,%3Csvg width='7' height='10' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='m1 9 4-4-4-4' stroke='%23fff' stroke-width='1.5'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
+.brewery-top {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+
+  grid-gap: 11px;
+
+  &__title {
+    font-size: clamp(18px, 3.376vw, 48px);
+  }
+
+  p {
+    max-width: 526px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: var(--font-family);
+    color: var(--color-a);
+
+    opacity: 0.8;
+  }
+}
+
+.contact-top {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 calc((1422px - 1282px) / 2) clamp(35px, 4.219vw, 60px);
+
+  grid-gap: 11px;
+
+@include small-tablet {
+    padding: 0 10px clamp(35px, 4.219vw, 60px);
+  }
+
+@include mobile {
+    padding-bottom: 49px;
+  }
+
+  &__title {
+    font-size: clamp(18px, 3.376vw, 48px);
+  }
+
+  &--second {
+    padding: 0 0 20px;
+
+    border-bottom: 1px solid var(--border-a);
+  }
+}
+.restaurants-top {
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 clamp(40px, 5.626vw, 80px);
+
+  grid-gap: 11px;
+}
+
+.assortment-top {
+  display: grid;
+  align-items: flex-end;
+  padding: 0;
+
+  grid-gap: 11px clamp(70px, 7.032vw, 100px);
+  grid-template-columns: 1fr 550px;
+
+@include tablet {
+    grid-template-columns: 100%;
+  }
+
+  .main-top__btn {
+    display: flex;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    grid-column: 2;
+    grid-gap: clamp(20px, 3.094vw, 44px);
+    grid-row: 1/ span 3;
+
+@include tablet {
+      grid-column: initial;
+      grid-row: initial;
+    }
+
+@include mobile {
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
+.about-top {
+  display: grid;
+  align-items: flex-end;
+  padding: 0;
+
+  grid-gap: 11px clamp(70px, 12.658vw, 180px);
+  grid-template-columns: repeat(2, 1fr);
+
+@include laptop {
+    grid-template-columns: 100%;
+  }
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    grid-column: 2;
+    grid-gap: 19px;
+    grid-row: 1/ span 3;
+
+@include laptop {
+      grid-column: initial;
+      grid-row: initial;
+    }
+
+@include small-tablet {
+      flex-direction: column-reverse;
+      align-items: flex-start;
+    }
+
+@include mobile {
+      align-items: center;
+    }
+  }
+
+  p {
+    max-width: 530px;
+    padding-top: 17px;
+
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    font-family: var(--font-family);
+    color: var(--color-a);
+
+    opacity: 0.5;
+
+@include laptop {
+      padding: 0;
+    }
+  }
+}

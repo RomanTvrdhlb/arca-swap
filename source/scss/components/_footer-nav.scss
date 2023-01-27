@@ -1,0 +1,29 @@
+.footer-nav{
+    
+    padding: 0.2rem 0;
+    
+
+    &__list{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item{
+        display: flex;
+    }
+
+    &__link{
+        font-family: var(--font-family);
+        font-style: normal;
+        font-weight: 400;
+        font-size: .14rem;
+        color: var(--color-f);
+        transition: all .2s;
+
+        &:hover{
+            color: var(--color-h);
+        }
+    }
+}
